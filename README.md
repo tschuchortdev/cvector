@@ -1,4 +1,5 @@
 # CVector
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/62b547e56ed746958f06cc1dfd770d7c)](https://www.codacy.com/app/t-schuchort/cvector?utm_source=github.com&utm_medium=referral&utm_content=tschuchortdev/cvector&utm_campaign=badger)
 [![Build Status](https://travis-ci.org/tschuchortdev/cvector.svg?branch=master)](https://travis-ci.org/tschuchortdev/cvector)
 
 CVector simple generic vector implemented in C
