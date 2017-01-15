@@ -36,14 +36,14 @@ void* vectorGet(Vector* vec, rsize_t index);
 void vectorClear(Vector* vec);
 VectorError vectorShrinkToFit(Vector* vector);
 VectorError vectorShrinkToFitExactly(Vector* vector);
-VectorError vectorReserve(Vector* vec, unsigned int capacity);
+VectorError vectorReserve(Vector* vec, size_t capacity);
 VectorError vectorSwap(Vector* vec, rsize_t index1, rsize_t index2);
 VectorError vectorInsert(Vector* vec, rsize_t index, const void* elem);
 VectorError vectorRemoveFirst(Vector* vector);
 VectorError vectorRemoveLast(Vector* vec);
 VectorError vectorRemoveAt(Vector* vec, rsize_t index);
 VectorError vectorRemoveRange(Vector* vec, rsize_t index, size_t end);
-VectorError vectorInsertArray(Vector* vec, rsize_t index, const void* elems, unsigned int length);
+VectorError vectorInsertArray(Vector* vec, rsize_t index, const void* elems, size_t length);
 void vectorDestroy(Vector* vec);
 
 #if __cplusplus
