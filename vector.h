@@ -2,8 +2,8 @@
 // Created by Thilo on 1/13/2017.
 //
 
-#ifndef CHAT_VECTOR_H
-#define CHAT_VECTOR_H
+#ifndef VECTOR_H
+#define VECTOR_H
 
 #include <stddef.h>
 
@@ -50,4 +50,4 @@ void vectorDestroy(Vector* vec);
 }
 #endif
 
-#endif //CHAT_VECTOR_H
+#endif // VECTOR_H
