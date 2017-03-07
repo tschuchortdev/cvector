@@ -21,5 +21,5 @@ create_test(test_cvector SOURCES ${test_sources} DEPENDS cvector)
 
 # add target to run all tests in one executable
 if(${CMAKE_PROJECT_NAME}_all_tests)
-    create_test_suite(all_tests FROM "${${CMAKE_PROJECT_NAME}_all_tests}")
+   create_test_suite(all_tests "${${CMAKE_PROJECT_NAME}_all_tests}")
 endif()
