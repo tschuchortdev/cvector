@@ -55,12 +55,14 @@ install:
       else
         if ! brew ls --version cmake &>/dev/null; then brew install cmake; fi
       fi
+
 before_script:
   - sudo unlink /usr/bin/gcc && sudo ln -s /usr/bin/gcc-5 /usr/bin/gcc
   - cd "${TRAVIS_BUILD_DIR}"
   - gcc --version
   - cmake --version
   - git pull --recurse-submodules
+
 script:
   # set up out-of-source build folder
   - rm -rf ./build || true

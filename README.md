@@ -1,6 +1,8 @@
 # CVector
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/62b547e56ed746958f06cc1dfd770d7c)](https://www.codacy.com/app/t-schuchort/cvector?utm_source=github.com&utm_medium=referral&utm_content=tschuchortdev/cvector&utm_campaign=badger)
-[![Build Status](https://travis-ci.org/tschuchortdev/cvector.svg?branch=master)](https://travis-ci.org/tschuchortdev/cvector) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/tschuchortdev/cvector/issues)
+[![Build Status](https://travis-ci.org/tschuchortdev/cvector.svg?branch=master)](https://travis-ci.org/tschuchortdev/cvector) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+[![Build Status](https://ci.appveyor.com/api/projects/status/github/tschuchortdev/cvector?branch=master&svg=true)](https://ci.appveyor.com/project/tschuchortdev/cvector/branch/master)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/tschuchortdev/cvector/issues)
 
 
 CVector simple generic vector implemented in C
