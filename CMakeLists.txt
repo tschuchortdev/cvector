@@ -4,8 +4,10 @@ project(cvector)
 include(external/gtest/GTest.cmake)
 
 set(CMAKE_C_STANDARD 11)
+set(CMAKE_CXX_STANDARD 14)
 # dont fall back to an older standard if the compiler doesn't support it
 set(CMAKE_C_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # disable gnu extensions and similar stuff to get consistent builds
 set(CMAKE_C_EXTENSIONS OFF)
 set(CMAKE_CXX_EXTENSIONS OFF)
