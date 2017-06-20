@@ -1,6 +1,5 @@
 #include <vector.h>
 #include <gtest/gtest.h>
-#include <gmock/gmock.h>
 
 void fillVector(Vector* v, size_t size) {
 	for (unsigned int i = 0; i < size; i++)

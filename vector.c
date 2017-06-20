@@ -10,10 +10,12 @@
 static const size_t VECTOR_INITIAL_CAPACITY = 8;
 
 unsigned int roundUpToMultiple(unsigned int num, unsigned int multiple) {
+	int remainder;
+
 	if (multiple == 0)
 		return num;
 
-	int remainder = num % multiple;
+	remainder = num % multiple;
 
 	if (remainder == 0)
 		return num;
@@ -22,7 +24,10 @@ unsigned int roundUpToMultiple(unsigned int num, unsigned int multiple) {
 }
 
 Vector initVector(size_t elemSize) {
-	return (Vector) {.elemSize = elemSize};
+	Vector v = {0};
+	v.elemSize = elemSize;
+
+	return v;
 }
 
 VectorError vectorAdd(Vector* vec, const void* elem) {

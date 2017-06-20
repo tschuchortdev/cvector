@@ -10,6 +10,9 @@ os:
 configuration:
   - Release
 
+matrix:
+   fast_finish: true
+
 addons:
   apt:
     sources:
@@ -19,8 +22,8 @@ addons:
 
     packages:
       - clang-3.7
-      - g++-5
-      - gcc-5
+      - g++-6
+      - gcc-6
 
 cache:
   directories:
@@ -28,6 +31,7 @@ cache:
 
 git:
   submodules: true
+  depth: 3
 
 before_install:
   - git pull --recurse-submodules
@@ -57,10 +61,9 @@ install:
       fi
 
 before_script:
-  - sudo unlink /usr/bin/gcc && sudo ln -s /usr/bin/gcc-5 /usr/bin/gcc
+  - sudo unlink /usr/bin/gcc && sudo ln -s /usr/bin/gcc-6 /usr/bin/gcc
   - cd "${TRAVIS_BUILD_DIR}"
-  - gcc --version
-  - cmake --version
+  - gcc -v && g++ -v && cmake --version
   - git pull --recurse-submodules
 
 script:
@@ -75,14 +78,8 @@ script:
   # build
   - cmake --build . --clean-first
 
-  # list available tests
-  - ctest -N
-
   # run automated tests
-  - ctest -R all_tests -C --output-on-failure
-
-  - find | sed 's|[^/]*/|- |g'
-  - cd .. && find | sed 's|[^/]*/|- |g'
+  - ctest -R all_tests --output-on-failure
 
 notifications:
   email: false

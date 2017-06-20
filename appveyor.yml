@@ -5,6 +5,8 @@ environment:
   - Toolset: mingw64
   - Toolset: v140
   - Toolset: v120
+  - Toolset: v110
+  - Toolset: v100
 
 platform:
   - Win32
@@ -67,7 +69,8 @@ build_script:
 
 test_script:
   - ps: |
-      ctest -C $env:CONFIGURATION
+      ctest -R all_tests -C $env:CONFIGURATION --output-on-failure
+
       if ($LastExitCode -ne 0) {
           tree /f
           throw "Exception: $ErrorMessage"
